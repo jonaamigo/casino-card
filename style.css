@@ -37,8 +37,6 @@ body {
   flex-basis: 70%;
   padding: 10px;
 }
-.card .card-image img {
-}
 
 .card .card-content .card-title {
   color: #2f7e8d;
@@ -73,10 +71,10 @@ button {
   border: none;
   padding: 5px;
 }
-button.btn-defaut {
-}
 button.btn-primary {
   background: #fdbe0f;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media (max-width: 600px) {
@@ -109,4 +107,77 @@ button.btn-primary {
   overflow: hidden;
   font-weight: bold;
   font-size: 30px;
+}
+
+.card .card-title {
+  color: #2f7e8d;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.card .card-subtitle {
+  font-weight: bold;
+}
+
+.card .card-content-scroll {
+  max-height: 80px;
+  position: relative;
+  overflow-y: scroll;
+}
+
+.border {
+  width: 3px;
+  position: absolute;
+  background: black;
+  height: 80px;
+  right: 10px;
+  top: 5px;
+}
+
+.card-title {
+  margin-bottom: 15px;
+}
+
+.card-detail {
+  display: block;
+  margin: 10px;
+}
+
+.terms-buttons {
+  margin-top: 15px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+::-webkit-scrollbar-button {
+  width: 10px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #b2b2b2;
+  border: 0px none white;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #dadada;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #6d6d6d;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-track:active {
+  background: #ffffff;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
