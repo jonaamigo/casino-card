@@ -1,0 +1,112 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-card {
+  width: 60%;
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.card .card-image {
+  flex-basis: 30%;
+  background-image: url("casino.PNG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 200px;
+}
+.card .card-content {
+  flex-basis: 70%;
+  padding: 10px;
+}
+.card .card-image img {
+}
+
+.card .card-content .card-title {
+  color: #2f7e8d;
+}
+.card .card-content .card-title-text-1 {
+  font-size: 24px;
+}
+.card .card-content .card-title-text-2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.card .card-content .card-info {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.card .card-content .card-info-title {
+  font-weight: bold;
+}
+.card .card-content .card-info-text {
+}
+.card .card-content .card-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card .card-content .card-buttons button {
+  flex-basis: 32%;
+}
+
+button {
+  border: none;
+  padding: 5px;
+}
+button.btn-defaut {
+}
+button.btn-primary {
+  background: #fdbe0f;
+}
+
+@media (max-width: 600px) {
+  .card {
+    display: block;
+  }
+
+  .card .card-content .card-buttons button {
+    flex-basis: 48%;
+  }
+
+  .card .card-content .card-buttons button.full {
+    margin-top: 4%;
+    flex-basis: 100%;
+  }
+}
+
+.card-now {
+  position: absolute;
+  right: -30px;
+  width: 129px;
+  transform: rotate(45deg);
+  top: 20px;
+  text-align: center;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fdbe0f;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 30px;
+}
