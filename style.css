@@ -70,11 +70,31 @@ body {
 button {
   border: none;
   padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+button .material-icons {
+  display: none;
+  font-size: 18px;
+}
+button:hover .material-icons {
+  display: block;
+}
+
+button:hover {
+  background: #d4d5d9;
+}
+
 button.btn-primary {
   background: #fdbe0f;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+button.btn-primary:hover {
+  background: #b68705;
 }
 
 @media (max-width: 600px) {
@@ -146,6 +166,11 @@ button.btn-primary {
 
 .terms-buttons {
   margin-top: 15px;
+  display: flex;
+}
+
+.terms-buttons button{
+  margin-right: 5px;
 }
 
 ::-webkit-scrollbar {
