@@ -14,11 +14,13 @@ body {
 
 .container-card {
   width: 60%;
+  height: 260px;
 }
 
 .card {
   display: flex;
   width: 100%;
+  height: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -32,7 +34,6 @@ body {
 }
 .card .card-content {
   flex-basis: 70%;
-  padding: 10px;
 }
 
 .card .card-content .card-title {
@@ -54,13 +55,25 @@ body {
 }
 .card .card-content .card-info-text {
 }
-.card .card-content .card-buttons {
+
+.card .card-content-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-basis: 70%;
+  padding: 10px;
+}
+.card .card-content-container .card-buttons {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.card .card-content .card-buttons button {
+.card .card-content-container .card-content {
+  justify-content: normal;
+}
+
+.card .card-content-container .card-buttons button {
   flex-basis: 32%;
 }
 
@@ -70,6 +83,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 button .material-icons {
@@ -94,18 +108,35 @@ button.btn-primary:hover {
   background: #b68705;
 }
 
+.card .card-content-scroll {
+  max-height: 140px;
+  position: relative;
+  overflow-y: scroll;
+}
+
 @media (max-width: 600px) {
+  .container-card {
+    height: 490px;
+  }
+
   .card {
     display: block;
   }
-
-  .card .card-content .card-buttons button {
-    flex-basis: 48%;
+  .flip-card-back .card {
+    display: flex;
   }
 
-  .card .card-content .card-buttons button.full {
-    margin-top: 4%;
-    flex-basis: 100%;
+  .card .card-content-container .card-buttons-container button {
+    flex-basis: 48% !important;
+  }
+
+  .card .card-content-container .card-buttons-container button.full {
+    margin-top: 4% !important;
+    flex-basis: 100% !important;
+  }
+
+  .card .card-content-scroll {
+    max-height: 375px;
   }
 }
 
@@ -143,12 +174,6 @@ button.btn-primary:hover {
   font-weight: bold;
 }
 
-.card .card-content-scroll {
-  max-height: 80px;
-  position: relative;
-  overflow-y: scroll;
-}
-
 .border {
   width: 3px;
   position: absolute;
@@ -163,8 +188,10 @@ button.btn-primary:hover {
 }
 
 .card-detail {
-  display: block;
-  margin: 10px;
+  display: flex;
+}
+.card-detail .card-content-container {
+  flex-basis: 100%;
 }
 
 .terms-buttons {
@@ -176,6 +203,38 @@ button.btn-primary:hover {
   margin-right: 5px;
 }
 
+/*CARD FLIP*/
+.flip-card {
+  background-color: transparent;
+  height: 100%;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(-180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden !important;
+  background-color: white;
+}
+
+.flip-card-back {
+  transform: rotateY(-180deg);
+}
+/*SCROLL*/
 ::-webkit-scrollbar {
   width: 10px;
   height: 5px;
