@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Casino test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container-card">
+
+
+            <div class="flip-card" id="card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="card shadow">
+                            <div class="card-now shadow">NEW</div>
+                            <div class="card-image"></div>
+
+                            <div class="card-content-container">
+                                <div class="card-content">
+                                    <div class="card-title">
+                                        <div class="card-title-text-1">BETBRIGHT CASINO</div>
+                                        <div class="card-title-text-2">E1000 BONUS</div>
+                                    </div>
+
+                                    <div class="card-info">
+                                        <div class="card-info-title">JOIN</div>
+                                        <div class="card-info-text">Open an account with us, it takes a few minutes
+                                        </div>
+                                    </div>
+
+                                    <div class="card-info">
+                                        <div class="card-info-title">DEPOSIT</div>
+                                        <div class="card-info-text">Open an account with us, it takes a few minutes
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-buttons-container">
+                                    <div class="card-buttons">
+                                        <button class="btn-default" onclick="onClickTerms()">
+                                            <i class="material-icons">loop</i>
+                                            Ts&Cs
+                                        </button>
+                                        <button class="btn-default">Find out more</button>
+                                        <button class="btn-primary full">Join now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="card shadow">
+                            <div class="card-detail">
+
+
+                                <div class="card-content-container">
+                                    <div class="card-content">
+                                        <div class="card-title">CASINO BONUS</div>
+                                        <div class="card-content-scroll">
+                                            <div class="card-text">
+                                                <div class="card-subtitle">Terms & Conditions</div>
+                                                <p>
+                                                    We also process your Personal Information where we deem such
+                                                    processing to
+                                                    be in
+                                                    our
+                                                    (or
+                                                    a
+                                                    third party's) legitimate interests and provided always that such
+                                                    processing
+                                                    will
+                                                    not
+                                                    prejudice your interests, rights and freedoms. Examples of us
+                                                    processing in
+                                                    accordance
+                                                    with
+                                                    legitimate interests would include: (i) where we disclose your
+                                                    Personal
+                                                    Information
+                                                    to
+                                                    any
+                                                    one or more of our associate/subsidiary companies following a
+                                                    restructure or
+                                                    for
+                                                    internal
+                                                    administrative purposes; (ii) detection and retention of information
+                                                    pertaining
+                                                    to
+                                                    those
+                                                    with responsible gambling issues; (iii) processing for the purposes
+                                                    of
+                                                    ensuring
+                                                    network
+                                                    and
+                                                    information security, including preventing unauthorized access to
+                                                    our
+                                                    electronic
+                                                    communications network; (iv) safeguarding the integrity of our
+                                                    Services by
+                                                    combatting,
+                                                    reporting and sharing information related to suspicious betting
+                                                    patterns or
+                                                    fraudulent
+                                                    activities; (v) adhering to regulatory and statutory requirements;
+                                                    (vi)
+                                                    devising
+                                                    a
+                                                    tailored
+                                                    reward scheme for players; and (vii) sharing personal information
+                                                    with our
+                                                    advisers
+                                                    and
+                                                    professional services providers (such as auditors) for ensuring our
+                                                    compliance
+                                                    with
+                                                    regulatory requirements and industry best practices.
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="white-shadow-scroll"></div>
+                                    </div>
+
+                                    <div class="card-buttons-container">
+                                        <div class="terms-buttons">
+                                            <button onclick="onClickBack()">
+                                                <i class="material-icons">loop</i>
+                                                BACK
+                                            </button>
+                                            <button class="btn-primary">JOIN NOW</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+
+<script>
+    function onClickTerms() {
+        document.getElementById("card").classList.add("flipped");
+    }
+    function onClickBack() {
+        document.getElementById("card").classList.remove("flipped");
+    }
+</script>
+
+</html>
